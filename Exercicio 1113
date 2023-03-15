@@ -1,0 +1,10 @@
+<?php
+
+$input = fscanf(STDIN, "%d %d %d\n");
+list($a, $b, $c) = $input;
+
+$maiorAB = ($a + $b + abs($a - $b)) / 2;
+
+$maior = ($maiorAB + $c + abs($maiorAB - $c)) / 2;
+
+echo "{$maior} eh o maior\n";

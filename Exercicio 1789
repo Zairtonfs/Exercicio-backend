@@ -1,0 +1,26 @@
+<?php
+
+while ($line = fgets(STDIN)) { 
+
+    $num_lesmas = intval(trim($line)); 
+    $velocidades = explode(" ", fgets(STDIN));
+
+    $maior_velocidade = 0; 
+
+    foreach ($velocidades as $velocidade) {
+        $velocidade = intval(trim($velocidade));
+        if ($velocidade > $maior_velocidade) {
+            $maior_velocidade = $velocidade;
+        }
+    }
+
+    if ($maior_velocidade < 10) {
+        echo "1\n";
+    } elseif ($maior_velocidade < 20) {
+        echo "2\n";
+    } else {
+        echo "3\n";
+    }
+}
+
+?>

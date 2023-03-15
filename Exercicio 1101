@@ -1,0 +1,23 @@
+<?php
+
+while (true) {
+  $input = fscanf(STDIN, "%d %d\n");
+  list($m, $n) = $input;
+  
+  if ($m <= 0 || $n <= 0) {
+    break;
+  }
+  
+  if ($m > $n) {
+    list($m, $n) = array($n, $m);
+  }
+  
+  $sequence = "";
+  $sum = 0;
+  for ($i = $m; $i <= $n; $i++) {
+    $sequence .= "$i ";
+    $sum += $i;
+  }
+  echo trim($sequence) . " Sum={$sum}\n";
+}
+

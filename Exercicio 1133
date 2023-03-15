@@ -1,0 +1,15 @@
+<?php
+
+$x = intval(readline("Digite o valor de X: "));
+$y = intval(readline("Digite o valor de Y: "));
+
+if ($x > $y) {
+  list($x, $y) = array($y, $x);
+}
+
+for ($i = $x + 1; $i < $y; $i++) {
+  $resto = $i % 5;
+  if ($resto == 2 || $resto == 3) {
+    echo "{$i}\n";
+  }
+}
